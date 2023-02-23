@@ -34,13 +34,16 @@
 
 
 
-<div class="container">
-<div class="my-lists mt-6">
-  <h2>My lists</h2>
-  <ul>
-    <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
-    <% end %>
-  </ul>
-</div>
+<div class="container mt-10">
+  <div class="mt-10">
+    <h2>My lists</h2>
+        <ul>
+            <% @lists.each do |list| %>
+              <div class="card-category list-inline d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+                <li><%= link_to list.name, list_path(list) %></li>
+              </div>
+            <% end %>
+        </ul>
+    </div>
+  </div>
 </div>
