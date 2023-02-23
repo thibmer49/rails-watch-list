@@ -1,0 +1,7 @@
+<h1>CREATE A NEW LIST</h1>
+
+<%= form_with model: @restaurant do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
