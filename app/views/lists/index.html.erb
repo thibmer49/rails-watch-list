@@ -1,7 +1,46 @@
-<h1>WATCH LIST</h1>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://img.freepik.com/vecteurs-libre/tasse-graphique-illustration-pop-corn_53876-8059.jpg?w=1380&t=st=1677166814~exp=1677167414~hmac=f30f7a0174b3c6faa1baac2ffefc81b930c50280498a5ef842ffcd48fa9a4e29" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">My lists</a>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+            <%= link_to "Create a new list", new_list_path %>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+          <!--li class="nav-item"-->
+          <!--/li-->
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/436413/pexels-photo-436413.jpeg);">
+  <div class="container">
+    <h1 class="text-center">WATCH LIST</h1>
+  </div>
+</div>
+
+
+
+<div class="container">
+<div class="my-lists mt-6">
+  <h2>My lists</h2>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+</div>
+</div>
